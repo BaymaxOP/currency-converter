@@ -48,6 +48,7 @@ form input {
     margin-top: 2rem;
 }
 
+/* Fixed: Specific styling for the swap button inside dropdown */
 .dropdown .swap-btn {
     width: auto !important;
     height: auto !important;
@@ -101,6 +102,7 @@ form input {
     margin: 2rem 0 2rem 0;
 }
 
+/* Main form button styling */
 form button:not(.swap-btn) {
     height: 3rem;
     background-color: #313D5A;
@@ -119,25 +121,176 @@ form input:focus,
     box-shadow: 0 0 5px #313D5A;
 }
 
+/* Tablet styles */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 85vw;
+        padding: 1.5rem;
+    }
+    
+    .dropdown {
+        gap: 1rem;
+    }
+    
+    .select-container {
+        width: 7rem;
+    }
+}
+
+/* Mobile styles */
 @media screen and (max-width: 600px) {
     .container {
         width: 90vw;
         padding: 1rem;
+        min-height: auto;
     }
 
-    .select-container {
-        width: 100%;
-        margin-top: 0.5rem;
+    .container h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
 
     .dropdown {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .dropdown .from,
+    .dropdown .to {
+        width: 100%;
+    }
+
+    .dropdown .from p,
+    .dropdown .to p {
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+    }
+
+    .select-container {
+        width: 100%;
+        padding: 0.75rem;
+        justify-content: space-between;
+    }
+
+    .select-container img {
+        max-width: 1.5rem;
+    }
+
+    .select-container select {
+        font-size: 1rem;
+        padding: 0.5rem;
+        flex-grow: 1;
+        margin-left: 0.5rem;
     }
 
     .dropdown .swap-btn {
         transform: rotate(90deg);
-        margin: 1rem 0;
+        margin: 0.5rem 0;
+        padding: 0.75rem;
+        border-radius: 50%;
+        background-color: #f8f9fa !important;
+        border: 2px solid #e9ecef !important;
+    }
+
+    .dropdown .swap-btn:hover {
+        background-color: #e9ecef !important;
+        border-color: #313D5A !important;
+    }
+
+    .dropdown .swap-btn i {
+        font-size: 1.25rem;
+    }
+
+    form input {
+        height: 3.5rem;
+        font-size: 1.1rem;
+        padding-left: 1rem;
+    }
+
+    form button:not(.swap-btn) {
+        height: 3.5rem;
+        font-size: 1.1rem;
+        margin-top: 1rem;
+    }
+
+    .msg {
+        margin: 1.5rem 0;
+        font-size: 1.1rem;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .amount p {
+        margin-bottom: 0.5rem;
+        font-weight: 500;
+    }
+}
+
+/* Small mobile styles */
+@media screen and (max-width: 480px) {
+    .container {
+        width: 95vw;
+        padding: 0.75rem;
+    }
+
+    .container h2 {
+        font-size: 1.25rem;
+    }
+
+    .select-container {
+        padding: 0.5rem;
+    }
+
+    .select-container img {
+        max-width: 1.25rem;
+    }
+
+    .select-container select {
+        font-size: 0.9rem;
+    }
+
+    form input {
+        height: 3rem;
+        font-size: 1rem;
+    }
+
+    form button:not(.swap-btn) {
+        height: 3rem;
+        font-size: 1rem;
+    }
+
+    .dropdown .swap-btn {
+        padding: 0.5rem;
+    }
+
+    .dropdown .swap-btn i {
+        font-size: 1rem;
+    }
+}
+
+/* Extra small mobile styles */
+@media screen and (max-width: 320px) {
+    .container {
+        width: 98vw;
+        padding: 0.5rem;
+    }
+
+    .container h2 {
+        font-size: 1.1rem;
+    }
+
+    .select-container select {
+        font-size: 0.8rem;
+    }
+
+    form input {
+        font-size: 0.9rem;
+    }
+
+    form button:not(.swap-btn) {
+        font-size: 0.9rem;
     }
 }
 

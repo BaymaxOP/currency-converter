@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -27,7 +27,7 @@ form {
     margin: 2rem 0 1rem 0;
 }
 
-form select,button,input {
+form select, button, input {
     width: 100%;
     border: none;
     outline: none;
@@ -48,9 +48,35 @@ form input {
     margin-top: 2rem;
 }
 
-.dropdown i {
-    font-size: 1.75rem;
+.dropdown .swap-btn {
+    width: auto !important;
+    height: auto !important;
+    background-color: transparent !important;
+    color: #313D5A;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
     margin-top: 1rem;
+}
+
+.dropdown .swap-btn:hover {
+    background-color: #f0f0f0 !important;
+    transform: scale(1.1);
+}
+
+.dropdown .swap-btn:active {
+    transform: scale(0.95);
+}
+
+.dropdown .swap-btn i {
+    font-size: 1.5rem;
+    color: #313D5A;
+}
+
+.dropdown .swap-btn:hover i {
+    color: #43527a;
 }
 
 .select-container img {
@@ -75,7 +101,7 @@ form input {
     margin: 2rem 0 2rem 0;
 }
 
-form button {
+form button:not(.swap-btn) {
     height: 3rem;
     background-color: #313D5A;
     color: #fff;
@@ -83,7 +109,7 @@ form button {
     cursor: pointer;
 }
 
-form button:hover {
+form button:not(.swap-btn):hover {
     background-color: #43527a;
 }
 
@@ -109,7 +135,7 @@ form input:focus,
         align-items: flex-start;
     }
 
-    .dropdown i {
+    .dropdown .swap-btn {
         transform: rotate(90deg);
         margin: 1rem 0;
     }

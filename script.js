@@ -50,6 +50,22 @@ const updateFlag = (element) => {
     img.src = newSrc;
 }
 
+const swapBtn = document.querySelector(".swap-btn");
+
+swapBtn.addEventListener("click", () => {
+    // Swap selected values
+    let temp = fromCurr.value;
+    fromCurr.value = toCurr.value;
+    toCurr.value = temp;
+
+    // Trigger flag updates
+    updateFlag(fromCurr);
+    updateFlag(toCurr);
+
+    // Refresh conversion
+    updateExchangeRate();
+});
+
 btn.addEventListener("click", (evt) => {
     evt.preventDefault();
     updateExchangeRate();
